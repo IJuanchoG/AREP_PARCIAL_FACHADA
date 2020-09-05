@@ -39,6 +39,14 @@ public class RestPersistence {
     }
 
 
+    /**
+     * Gets results.
+     *
+     * @param type   the type
+     * @param data   the data
+     * @param result the result
+     * @return the results
+     */
     public static String getResults(String type, String data, String result) {
         StringBuilder pageContent
                 = new StringBuilder("<!DOCTYPE html>"

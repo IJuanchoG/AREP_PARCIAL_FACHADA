@@ -2,8 +2,19 @@ package edu.eci.arep.sparkwebapp.persistence;
 
 import com.google.gson.JsonObject;
 
+/**
+ * The type Trig calculator.
+ */
 public class TrigCalculator {
 
+    /**
+     * Create gson json object.
+     *
+     * @param type   the type
+     * @param data   the data
+     * @param result the result
+     * @return the json object
+     */
     public static JsonObject createGson(String type,String data, String result){
         JsonObject innerObject = new JsonObject();
         innerObject.addProperty("function", type);
@@ -14,6 +25,13 @@ public class TrigCalculator {
         return jsonObject;
     }
 
+    /**
+     * Calculate string.
+     *
+     * @param type the type
+     * @param data the data
+     * @return the string
+     */
     public static String calculate(String type, String data){
         double value = numberOf(data);
         switch (type) {
